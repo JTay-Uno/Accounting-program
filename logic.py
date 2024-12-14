@@ -97,23 +97,28 @@ class Logic(QMainWindow, Ui_MainWindow):
                     print("deposit - checking")
                     if self.__account.deposit(amount):
                         self.checking_Radio.setText(f'{self.__account}')
-                        self.output_text_Label.setText(f'Successfully deposited ${amount:.2f} into checking account.')
+                        self.output_text_Label.setText(f'Successfully deposited ${amount:.2f} into checking.')
+                        self.output_text_Label.setText(f'Deposit error')
                 case 'Deposit', -3:
                     print("deposit - savings")
                     if self.__savings.deposit(amount):
                         self.savings_Radio.setText(f'{self.__savings}')
-                        self.output_text_Label.setText(f'Successfully deposited ${amount:.2f} into savings account.')
+                        self.output_text_Label.setText(f'Successfully deposited ${amount:.2f} into savings.')
+                    else:
+                        self.output_text_Label.setText(f'Deposit error')
                 case 'Withdraw', -2:  # withdraw - checking
                     if self.__account.withdraw(amount):
                         self.checking_Radio.setText(f'{self.__account}')
-                        self.output_text_Label.setText(f'Successfully withdrew ${amount:.2f} out of checking account.')
+                        self.output_text_Label.setText(f'Successfully withdrew ${amount:.2f} from checking.')
+                    else:
+                        self.output_text_Label.setText(f'Withdraw error')
                 case 'Withdraw', -3:  # withdraw - savings
                     if self.__savings.withdraw(amount):
                         self.savings_Radio.setText(f'{self.__savings}')
-                        self.output_text_Label.setText(f'Successfully withdrew ${amount:.2f} out of savings account.')
+                        self.output_text_Label.setText(f'Successfully withdrew ${amount:.2f} from savings.')
                     else:
                         self.output_text_Label.setText(
-                            "Please enter a value that will maintain a minimum balance of $100")
+                            "Miniumum Balance: $100")
                         self.amount_Entry.clear()
                         self.amount_Entry.setFocus()
                 case _:

@@ -42,32 +42,23 @@ class Account:
                 for row in reader:
                     if row['lName'] == "last_account":
                         self.__total_accounts = row['Customer_num']
+
                     if row['lName'] == lName and row['fName'] == fName:
                         if int(row['PIN']) == int(account_pin):
+                            self.__account_csv_line = row
 
                             if re.search('SavingAccount', str(self.__class__)):
-                                if re.match('Savings:', row['Savings']):
-
-                                    temp = row['Savings'].lstrip('Savings:')
-                                    search_temp = re.findall('[0-9.]+', temp)
-                                    if len(search_temp) == 2:
-                                        self.__account_balance = float(search_temp[0])
-                                        self.__deposit_count = int(search_temp[1])
-                                    else:
-                                        print("Error")
-                                    self.__account_csv_line = row
-                                    return True
-                                else:
-                                    return False
+                                temp = row['Savings'].split(':')
+                                self.__account_balance = float(temp[1])
+                                self.__deposit_count = int(temp[2])
+                                return True
                             elif re.search('Account', str(self.__class__)):
-                                if re.match('Checking:', row['Checking']):
-                                    self.__account_balance = round(
-                                        float(row['Checking'].lstrip('Checking:').rstrip(',')), 2)
-                                    print(self.__account_balance)
-                                    self.__account_csv_line = row
-                                    return True
-                                else:
-                                    return False
+                                temp = row['Checking'].split(':')
+                                self.__account_balance = float(temp[1])
+                                print(f"Checking, bal: {self.__account_balance}")
+                                return True
+                            else:
+                                return False
                         else:
                             return False
             return False
@@ -77,30 +68,36 @@ class Account:
     def validate(self):
         return self.__account_exist
 
-    def write_data(self, old_val:str, new_val:str) -> bool:
+    def write_data(self, key:str, new_val:str) -> bool:
         """
         Method updates the csv file
-        :param old_val: old string to be replaced
+        :param key of value to be replaced
         :param new_val: new string
         :return: True if update was successful, False if not
         """
-        temp = ''
-        for key, value in self.__account_csv_line.items():
-            temp = temp + value + ','
-        temp = temp.strip(',')
-        new_temp = temp.replace(old_val, new_val)
+
+        temp = ','.join(self.__account_csv_line.values())
+        self.__account_csv_line[key] = new_val
+        new_temp = ','.join(self.__account_csv_line.values())
+        print(temp)
+        print(new_temp)
 
         try:
             with open('data.csv', 'r+') as file:
                 data = file.read()
                 if re.search(temp, data):
                     data = data.replace(temp, new_temp)
+                else:
+                    print("Write Data Error, No match")
+                    return False
                 file.seek(0)
                 file.write(data)
+        except:
+            print("Write Data exception error")
+            return False
+        else:
             del data
             return True
-        except:
-            return False
 
     def deposit(self, amount:float ) -> bool:
         """
@@ -109,9 +106,8 @@ class Account:
         :return: True for successful deposit, False if not
         """
         if amount > 0:
-            if self.write_data(f'Checking:{self.__account_balance}', f'Checking:{self.__account_balance + amount}'):
+            if self.write_data('Checking', f'Checking:{self.__account_balance + amount:.02f}'):
                 self.__account_balance += amount
-                self.__account_csv_line['Checking'] = f'Checking:{self.__account_balance + amount}'
                 return True
             else:
                 return False
@@ -127,9 +123,8 @@ class Account:
         if amount > self.__account_balance or amount <= 0:
             return False
         else:
-            if self.write_data(f'Checking:{self.__account_balance}', f'Checking:{self.__account_balance + amount}'):
+            if self.write_data( 'Checking', f'Checking:{self.__account_balance - amount:.2f}'):
                 self.__account_balance -= amount
-                self.__account_csv_line['Checking'] = str(self.__account_balance)
                 return True
             else:
                 return False
@@ -142,16 +137,34 @@ class Account:
         :return: None
         """
         self.__account_balance = amount
-        self.__account_csv_line[account] = str(self.__account_balance)
+
+    def set_deposit_count(self, count:int) -> None:
+        """
+        Method sets the deposit count
+        :param count: int
+        :return: None
+        """
+        self.__deposit_count = count
 
     def get_balance(self) -> float:
         """
-        Method to get the account balance
-        :return: float account balance
+        Method to get the account balance & deposit count
+        :return: float account balance. int deposit count
         """
         return self.__account_balance
 
-    def get_name(self):
+    def get_deposit_count(self) -> int:
+        """
+        Method returns deposit_count as an integer
+        :return:
+        """
+        return self.__deposit_count
+
+    def get_name(self) -> str:
+        """
+        Method returns account name
+        :return:
+        """
         return self.__account_fName + ' ' + self.__account_lName
 
     def __str__(self):
@@ -172,7 +185,6 @@ class SavingAccount(Account):
         :param fName:
         :param pin:
         """
-        self.__deposit_count = 0
         super().__init__(lName, fName, pin)
 
     def apply_interest(self) -> None:
@@ -181,24 +193,27 @@ class SavingAccount(Account):
         :return: None
         """
         temp = self.get_balance()
+        temp2 = self.get_deposit_count()
         new = temp * (1 + SavingAccount.RATE)
-        if self.write_data(f'Savings:{temp}:{self.__deposit_count}', f'Savings:{new}:{self.__deposit_count}'):
-            self.set_balance(temp, 'Savings')
+        print("writing interest data")
+        if self.write_data('Savings', f'Savings:{new:0.2f}:{temp2}'):
+            self.set_balance(new, 'Savings')
 
     def deposit(self, amount:float) -> bool:
         """
-        Method that handles deposits into a checking account
+        Method that handles deposits into a checking account, calls apply_interest after %5 deposits
         :param amount: float amount to deposit
         :return: True if successful, False if not
         """
         if amount > 0:
-            temp = self.get_balance() + amount
-            print(self.__deposit_count)
-            if self.write_data(f'Savings:{temp}:{self.__deposit_count}',
-                               f'Savings:{temp + amount}:{self.__deposit_count + 1}'):
-                self.set_balance(temp, 'Savings')
-                self.__deposit_count += 1
-            if self.__deposit_count % 5 == 0:
+            temp = self.get_balance()
+            temp2 = self.get_deposit_count()
+
+            if self.write_data('Savings',f'Savings:{temp + amount:0.2f}:{temp2 + 1}'):
+                self.set_balance(temp + amount, 'Savings')
+                self.set_deposit_count(temp2+1, 'Savings')
+
+            if (temp2+1) % 5 == 0:
                 self.apply_interest()
             return True
         else:
@@ -211,12 +226,11 @@ class SavingAccount(Account):
         :return: True if successful, False if not
         """
         temp = self.get_balance()
-        if SavingAccount.MINIMUM > temp - amount:
-            print(f'Savings:{temp}:{self.__deposit_count}', f'Savings:{temp - amount}:{self.__deposit_count + 1}')
-            if self.write_data(f'Savings:{temp}:{self.__deposit_count}',
-                               f'Savings:{temp - amount}:{self.__deposit_count + 1}'):
+        temp2 = self.get_deposit_count()
+
+        if  temp-amount >= SavingAccount.MINIMUM:
+            if self.write_data('Savings', f'Savings:{temp - amount:0.2f}:{temp2}'):
                 self.set_balance(temp - amount, 'Savings')
-                self.__deposit_count += 1
                 return True
         else:
             return False

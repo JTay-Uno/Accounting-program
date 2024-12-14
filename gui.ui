@@ -1,770 +1,770 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>400</width>
-    <height>509</height>
-   </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>400</width>
-    <height>509</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>400</width>
-    <height>509</height>
-   </size>
-  </property>
-  <property name="windowTitle">
-   <string>First CSCI II ATM</string>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>70</y>
-      <width>281</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="fname_Layout">
-     <item>
-      <widget class="QLabel" name="fname_Label">
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>First Name</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Preferred</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="fname_Entry">
-       <property name="minimumSize">
-        <size>
-         <width>200</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>200</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="maxLength">
-        <number>40</number>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>100</y>
-      <width>281</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="lname_Layout">
-     <item>
-      <widget class="QLabel" name="lname_Label">
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Last Name</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Preferred</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lname_Entry">
-       <property name="minimumSize">
-        <size>
-         <width>200</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>200</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>281</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="pin_Layout">
-     <item>
-      <widget class="QLabel" name="pin_Label">
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Enter PIN</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Preferred</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="pin_Entry">
-       <property name="minimumSize">
-        <size>
-         <width>200</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>200</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>401</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="header_Layout">
-     <item>
-      <widget class="QLabel" name="bank_name_Label">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>300</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Goudy Old Style</family>
-         <pointsize>22</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="autoFillBackground">
-        <bool>true</bool>
-       </property>
-       <property name="text">
-        <string>FIRST CSCI II ATM</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>160</y>
-      <width>381</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="submit_pushButton">
-       <property name="minimumSize">
-        <size>
-         <width>110</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>110</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Times New Roman</family>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Submit</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QFrame" name="account_frame">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>200</y>
-      <width>381</width>
-      <height>301</height>
-     </rect>
-    </property>
-    <property name="acceptDrops">
-     <bool>false</bool>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QWidget" name="horizontalLayoutWidget_5">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>60</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="choice_Layout">
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QRadioButton" name="withdraw_radiobutton">
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>400</width>
+                <height>509</height>
+            </rect>
         </property>
-        <property name="text">
-         <string>Withdraw</string>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">action_buttonGroup</string>
-        </attribute>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QRadioButton" name="deposit_radiobutton">
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Deposit</string>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">action_buttonGroup</string>
-        </attribute>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="horizontalLayoutWidget_8">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>250</y>
-       <width>381</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="enter_exit_Layout">
-      <item>
-       <widget class="QPushButton" name="enter_pushButton">
         <property name="minimumSize">
-         <size>
-          <width>80</width>
-          <height>0</height>
-         </size>
+            <size>
+                <width>400</width>
+                <height>509</height>
+            </size>
         </property>
         <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>16777215</height>
-         </size>
+            <size>
+                <width>400</width>
+                <height>509</height>
+            </size>
         </property>
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
+        <property name="windowTitle">
+            <string>First CSCI II ATM</string>
         </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>ENTER</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="exit_pushButton">
-        <property name="minimumSize">
-         <size>
-          <width>80</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>EXIT</string>
-        </property>
-        <property name="autoDefault">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
+        <widget class="QWidget" name="centralwidget">
+            <widget class="QWidget" name="horizontalLayoutWidget">
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>70</y>
+                        <width>281</width>
+                        <height>31</height>
+                    </rect>
+                </property>
+                <layout class="QHBoxLayout" name="fname_Layout">
+                    <item>
+                        <widget class="QLabel" name="fname_Label">
+                            <property name="font">
+                                <font>
+                                    <family>Times New Roman</family>
+                                    <pointsize>12</pointsize>
+                                    <weight>75</weight>
+                                    <bold>true</bold>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>First Name</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <spacer name="horizontalSpacer">
+                            <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>QSizePolicy::Preferred</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </item>
+                    <item>
+                        <widget class="QLineEdit" name="fname_Entry">
+                            <property name="minimumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>16777215</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Times New Roman</family>
+                                    <pointsize>12</pointsize>
+                                </font>
+                            </property>
+                            <property name="maxLength">
+                                <number>40</number>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </widget>
+            <widget class="QWidget" name="horizontalLayoutWidget_2">
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>100</y>
+                        <width>281</width>
+                        <height>31</height>
+                    </rect>
+                </property>
+                <layout class="QHBoxLayout" name="lname_Layout">
+                    <item>
+                        <widget class="QLabel" name="lname_Label">
+                            <property name="font">
+                                <font>
+                                    <family>Times New Roman</family>
+                                    <pointsize>12</pointsize>
+                                    <weight>75</weight>
+                                    <bold>true</bold>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>Last Name</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <spacer name="horizontalSpacer_2">
+                            <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>QSizePolicy::Preferred</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </item>
+                    <item>
+                        <widget class="QLineEdit" name="lname_Entry">
+                            <property name="minimumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>16777215</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Times New Roman</family>
+                                    <pointsize>12</pointsize>
+                                </font>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </widget>
+            <widget class="QWidget" name="horizontalLayoutWidget_3">
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>130</y>
+                        <width>281</width>
+                        <height>31</height>
+                    </rect>
+                </property>
+                <layout class="QHBoxLayout" name="pin_Layout">
+                    <item>
+                        <widget class="QLabel" name="pin_Label">
+                            <property name="font">
+                                <font>
+                                    <family>Times New Roman</family>
+                                    <pointsize>12</pointsize>
+                                    <weight>75</weight>
+                                    <bold>true</bold>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>Enter PIN</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <spacer name="horizontalSpacer_3">
+                            <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>QSizePolicy::Preferred</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </item>
+                    <item>
+                        <widget class="QLineEdit" name="pin_Entry">
+                            <property name="minimumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>16777215</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Times New Roman</family>
+                                    <pointsize>12</pointsize>
+                                </font>
+                            </property>
+                            <property name="echoMode">
+                                <enum>QLineEdit::Password</enum>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </widget>
+            <widget class="QWidget" name="horizontalLayoutWidget_4">
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>401</width>
+                        <height>71</height>
+                    </rect>
+                </property>
+                <layout class="QHBoxLayout" name="header_Layout">
+                    <item>
+                        <widget class="QLabel" name="bank_name_Label">
+                            <property name="minimumSize">
+                                <size>
+                                    <width>75</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>300</width>
+                                    <height>16777215</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Goudy Old Style</family>
+                                    <pointsize>22</pointsize>
+                                    <weight>75</weight>
+                                    <bold>true</bold>
+                                </font>
+                            </property>
+                            <property name="autoFillBackground">
+                                <bool>true</bool>
+                            </property>
+                            <property name="text">
+                                <string>FIRST CSCI II ATM</string>
+                            </property>
+                            <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </widget>
+            <widget class="QWidget" name="verticalLayoutWidget_2">
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>160</y>
+                        <width>381</width>
+                        <height>41</height>
+                    </rect>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                    <item>
+                        <widget class="QPushButton" name="submit_pushButton">
+                            <property name="minimumSize">
+                                <size>
+                                    <width>110</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>110</width>
+                                    <height>16777215</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Times New Roman</family>
+                                    <pointsize>12</pointsize>
+                                    <weight>75</weight>
+                                    <bold>true</bold>
+                                </font>
+                            </property>
+                            <property name="layoutDirection">
+                                <enum>Qt::LeftToRight</enum>
+                            </property>
+                            <property name="text">
+                                <string>Submit</string>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </widget>
+            <widget class="QFrame" name="account_frame">
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>200</y>
+                        <width>381</width>
+                        <height>301</height>
+                    </rect>
+                </property>
+                <property name="acceptDrops">
+                    <bool>false</bool>
+                </property>
+                <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QWidget" name="horizontalLayoutWidget_5">
+                    <property name="geometry">
+                        <rect>
+                            <x>0</x>
+                            <y>60</y>
+                            <width>381</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <layout class="QHBoxLayout" name="choice_Layout">
+                        <item alignment="Qt::AlignHCenter">
+                            <widget class="QRadioButton" name="withdraw_radiobutton">
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Withdraw</string>
+                                </property>
+                                <attribute name="buttonGroup">
+                                    <string notr="true">action_buttonGroup</string>
+                                </attribute>
+                            </widget>
+                        </item>
+                        <item alignment="Qt::AlignHCenter">
+                            <widget class="QRadioButton" name="deposit_radiobutton">
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Deposit</string>
+                                </property>
+                                <attribute name="buttonGroup">
+                                    <string notr="true">action_buttonGroup</string>
+                                </attribute>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_8">
+                    <property name="geometry">
+                        <rect>
+                            <x>0</x>
+                            <y>250</y>
+                            <width>381</width>
+                            <height>41</height>
+                        </rect>
+                    </property>
+                    <layout class="QHBoxLayout" name="enter_exit_Layout">
+                        <item>
+                            <widget class="QPushButton" name="enter_pushButton">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>80</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>80</width>
+                                        <height>16777215</height>
+                                    </size>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="layoutDirection">
+                                    <enum>Qt::LeftToRight</enum>
+                                </property>
+                                <property name="text">
+                                    <string>ENTER</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <spacer name="horizontalSpacer_5">
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>QSizePolicy::Fixed</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                    <size>
+                                        <width>40</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="exit_pushButton">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>80</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>80</width>
+                                        <height>16777215</height>
+                                    </size>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="layoutDirection">
+                                    <enum>Qt::LeftToRight</enum>
+                                </property>
+                                <property name="text">
+                                    <string>EXIT</string>
+                                </property>
+                                <property name="autoDefault">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+                <widget class="QWidget" name="verticalLayoutWidget_3">
+                    <property name="geometry">
+                        <rect>
+                            <x>0</x>
+                            <y>30</y>
+                            <width>381</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout">
+                        <item alignment="Qt::AlignHCenter">
+                            <widget class="QLabel" name="prompt2_Label">
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>What would you like to do?</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_6">
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>180</y>
+                            <width>271</width>
+                            <height>41</height>
+                        </rect>
+                    </property>
+                    <layout class="QHBoxLayout" name="amount_entry_Layout">
+                        <item>
+                            <widget class="QLabel" name="amount_Label">
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Amount</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <spacer name="horizontalSpacer_4">
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>QSizePolicy::Preferred</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </item>
+                        <item>
+                            <widget class="QLineEdit" name="amount_Entry">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>200</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>200</width>
+                                        <height>16777215</height>
+                                    </size>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                    </font>
+                                </property>
+                                <property name="maxLength">
+                                    <number>40</number>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_9">
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>220</y>
+                            <width>361</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <layout class="QHBoxLayout" name="balance_output_Layout_2">
+                        <item>
+                            <widget class="QLabel" name="output_text_Label">
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string/>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_7">
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>120</y>
+                            <width>351</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                        <property name="leftMargin">
+                            <number>5</number>
+                        </property>
+                        <item alignment="Qt::AlignLeft">
+                            <widget class="QRadioButton" name="checking_Radio">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>15</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>16777215</width>
+                                        <height>16777215</height>
+                                    </size>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Checking account balance</string>
+                                </property>
+                                <attribute name="buttonGroup">
+                                    <string notr="true">account_buttonGroup</string>
+                                </attribute>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_10">
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>150</y>
+                            <width>351</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_3">
+                        <property name="leftMargin">
+                            <number>5</number>
+                        </property>
+                        <item alignment="Qt::AlignLeft">
+                            <widget class="QRadioButton" name="savings_Radio">
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>167777</width>
+                                        <height>16777215</height>
+                                    </size>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Savings Account balance</string>
+                                </property>
+                                <attribute name="buttonGroup">
+                                    <string notr="true">account_buttonGroup</string>
+                                </attribute>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+                <widget class="QWidget" name="verticalLayoutWidget_4">
+                    <property name="geometry">
+                        <rect>
+                            <x>0</x>
+                            <y>90</y>
+                            <width>160</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_2">
+                        <property name="leftMargin">
+                            <number>10</number>
+                        </property>
+                        <item>
+                            <widget class="QLabel" name="prompt2_Label_2">
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Select Account:</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </widget>
+            <widget class="QFrame" name="prompt_frame">
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>200</y>
+                        <width>381</width>
+                        <height>31</height>
+                    </rect>
+                </property>
+                <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                </property>
+                <widget class="QWidget" name="verticalLayoutWidget">
+                    <property name="geometry">
+                        <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>381</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <layout class="QVBoxLayout" name="prompts_Layout">
+                        <item alignment="Qt::AlignHCenter">
+                            <widget class="QLabel" name="prompt_label">
+                                <property name="font">
+                                    <font>
+                                        <family>Times New Roman</family>
+                                        <pointsize>12</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Please enter your credentials or create a new account.</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </widget>
+            <zorder>account_frame</zorder>
+            <zorder>horizontalLayoutWidget</zorder>
+            <zorder>horizontalLayoutWidget_2</zorder>
+            <zorder>horizontalLayoutWidget_3</zorder>
+            <zorder>horizontalLayoutWidget_4</zorder>
+            <zorder>verticalLayoutWidget_2</zorder>
+            <zorder>prompt_frame</zorder>
+        </widget>
+        <widget class="QStatusBar" name="statusbar"/>
     </widget>
-    <widget class="QWidget" name="verticalLayoutWidget_3">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>30</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QLabel" name="prompt2_Label">
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>What would you like to do?</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="horizontalLayoutWidget_6">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>180</y>
-       <width>271</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="amount_entry_Layout">
-      <item>
-       <widget class="QLabel" name="amount_Label">
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Amount</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Preferred</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="amount_Entry">
-        <property name="minimumSize">
-         <size>
-          <width>200</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="maxLength">
-         <number>40</number>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="horizontalLayoutWidget_9">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>220</y>
-       <width>361</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="balance_output_Layout_2">
-      <item>
-       <widget class="QLabel" name="output_text_Label">
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="horizontalLayoutWidget_7">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>120</y>
-       <width>351</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <property name="leftMargin">
-       <number>5</number>
-      </property>
-      <item alignment="Qt::AlignLeft">
-       <widget class="QRadioButton" name="checking_Radio">
-        <property name="minimumSize">
-         <size>
-          <width>15</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Checking account balance</string>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">account_buttonGroup</string>
-        </attribute>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="horizontalLayoutWidget_10">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>150</y>
-       <width>351</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <property name="leftMargin">
-       <number>5</number>
-      </property>
-      <item alignment="Qt::AlignLeft">
-       <widget class="QRadioButton" name="savings_Radio">
-        <property name="maximumSize">
-         <size>
-          <width>167777</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Savings Account balance</string>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">account_buttonGroup</string>
-        </attribute>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="verticalLayoutWidget_4">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>90</y>
-       <width>160</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <property name="leftMargin">
-       <number>10</number>
-      </property>
-      <item>
-       <widget class="QLabel" name="prompt2_Label_2">
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Select Account:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="prompt_frame">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>200</y>
-      <width>381</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <widget class="QWidget" name="verticalLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="prompts_Layout">
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QLabel" name="prompt_label">
-        <property name="font">
-         <font>
-          <family>Times New Roman</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Please enter your credentials or create a new account.</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <zorder>account_frame</zorder>
-   <zorder>horizontalLayoutWidget</zorder>
-   <zorder>horizontalLayoutWidget_2</zorder>
-   <zorder>horizontalLayoutWidget_3</zorder>
-   <zorder>horizontalLayoutWidget_4</zorder>
-   <zorder>verticalLayoutWidget_2</zorder>
-   <zorder>prompt_frame</zorder>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
- </widget>
- <resources/>
- <connections/>
- <buttongroups>
-  <buttongroup name="account_buttonGroup"/>
-  <buttongroup name="action_buttonGroup"/>
- </buttongroups>
+    <resources/>
+    <connections/>
+    <buttongroups>
+        <buttongroup name="account_buttonGroup"/>
+        <buttongroup name="action_buttonGroup"/>
+    </buttongroups>
 </ui>

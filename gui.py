@@ -32,7 +32,8 @@ class Ui_MainWindow(object):
         self.fname_Label.setFont(font)
         self.fname_Label.setObjectName("fname_Label")
         self.fname_Layout.addWidget(self.fname_Label)
-        spacerItem = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred,
+                                           QtWidgets.QSizePolicy.Policy.Minimum)
         self.fname_Layout.addItem(spacerItem)
         self.fname_Entry = QtWidgets.QLineEdit(parent=self.horizontalLayoutWidget)
         self.fname_Entry.setMinimumSize(QtCore.QSize(200, 0))
@@ -59,7 +60,8 @@ class Ui_MainWindow(object):
         self.lname_Label.setFont(font)
         self.lname_Label.setObjectName("lname_Label")
         self.lname_Layout.addWidget(self.lname_Label)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred,
+                                            QtWidgets.QSizePolicy.Policy.Minimum)
         self.lname_Layout.addItem(spacerItem1)
         self.lname_Entry = QtWidgets.QLineEdit(parent=self.horizontalLayoutWidget_2)
         self.lname_Entry.setMinimumSize(QtCore.QSize(200, 0))
@@ -85,7 +87,8 @@ class Ui_MainWindow(object):
         self.pin_Label.setFont(font)
         self.pin_Label.setObjectName("pin_Label")
         self.pin_Layout.addWidget(self.pin_Label)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred,
+                                            QtWidgets.QSizePolicy.Policy.Minimum)
         self.pin_Layout.addItem(spacerItem2)
         self.pin_Entry = QtWidgets.QLineEdit(parent=self.horizontalLayoutWidget_3)
         self.pin_Entry.setMinimumSize(QtCore.QSize(200, 0))
@@ -186,7 +189,8 @@ class Ui_MainWindow(object):
         self.enter_pushButton.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.enter_pushButton.setObjectName("enter_pushButton")
         self.enter_exit_Layout.addWidget(self.enter_pushButton)
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Fixed,
+                                            QtWidgets.QSizePolicy.Policy.Minimum)
         self.enter_exit_Layout.addItem(spacerItem3)
         self.exit_pushButton = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget_8)
         self.exit_pushButton.setMinimumSize(QtCore.QSize(80, 0))
@@ -231,7 +235,8 @@ class Ui_MainWindow(object):
         self.amount_Label.setFont(font)
         self.amount_Label.setObjectName("amount_Label")
         self.amount_entry_Layout.addWidget(self.amount_Label)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Preferred,
+                                            QtWidgets.QSizePolicy.Policy.Minimum)
         self.amount_entry_Layout.addItem(spacerItem4)
         self.amount_Entry = QtWidgets.QLineEdit(parent=self.horizontalLayoutWidget_6)
         self.amount_Entry.setMinimumSize(QtCore.QSize(200, 0))
@@ -368,6 +373,7 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
