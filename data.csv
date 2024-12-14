@@ -1,0 +1,6 @@
+lName,fName,Customer_num,Checking,Savings,PIN
+last_account,,4,,,0
+And,Aaron,1,,Savings:100:1,10001
+Bee,Bobby,2,Checking:10452.01,Savings:100:5,10002
+Car,Corey,3,Checking:100,,10003
+Dan,David,4,Checking:300,Savings:300:2,10004
