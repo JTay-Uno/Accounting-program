@@ -11,7 +11,7 @@ class Logic(QMainWindow, Ui_MainWindow):
     Logic class for the GUI
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Method that sets the default values, hides GUI widgets, and connects widgets to methods for the GUI Logic
         """
@@ -26,7 +26,7 @@ class Logic(QMainWindow, Ui_MainWindow):
         self.checking_Radio.hide()
         self.savings_Radio.hide()
 
-    def submit(self):
+    def submit(self) -> None:
         """
         Method that processes firstname, lastname and pin entered by the user. Once valid entries are made, Account and SavingAccount classes
             are created with the data. The .validate is used to verify if the accounts exist.
@@ -72,7 +72,7 @@ class Logic(QMainWindow, Ui_MainWindow):
                 self.checking_Radio.show()
                 self.checking_Radio.setChecked(True)
 
-    def enter(self):
+    def enter(self) -> None:
         """
         This method contains the logic for the enter button while checking the states of the radio buttons and submitted amount
         """
