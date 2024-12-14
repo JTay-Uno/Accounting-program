@@ -21,15 +21,12 @@ class Logic(QMainWindow, Ui_MainWindow):
 
     def submit(self):
         try:
-            # fname = self.fname_Entry.text().strip().lower()
-            # lname = self.lname_Entry.text().strip().lower()
-            # if len(fname) < 1 or len(lname) < 1: raise NameError
-            # pin = self.pin_Entry.text()
-            # if len(pin) != 5: raise ValueError
-            # pin = int(pin)
-            pin = 10002
-            fname = 'Bobby'
-            lname = 'Bee'
+            fname = self.fname_Entry.text().strip()
+            lname = self.lname_Entry.text().strip()
+            if len(fname) < 1 or len(lname) < 1: raise NameError
+            pin = self.pin_Entry.text()
+            if len(pin) != 5: raise ValueError
+            pin = int(pin)
         except ValueError:
             self.prompt_label.setText("Enter a five digit numeric PIN")
         except NameError:
