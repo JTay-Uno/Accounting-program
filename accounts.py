@@ -211,7 +211,7 @@ class SavingAccount(Account):
 
             if self.write_data('Savings',f'Savings:{temp + amount:0.2f}:{temp2 + 1}'):
                 self.set_balance(temp + amount, 'Savings')
-                self.set_deposit_count(temp2+1, 'Savings')
+                self.set_deposit_count(temp2+1)
 
             if (temp2+1) % 5 == 0:
                 self.apply_interest()
